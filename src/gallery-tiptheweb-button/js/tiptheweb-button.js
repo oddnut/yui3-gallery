@@ -6,7 +6,7 @@ work by tipping it.
 
 @url http://tiptheweb.org/
 @see http://tiptheweb.org/docs/integration/buttons/
-@module gallery-ttw-tip-button
+@module gallery-tiptheweb-button
 **/
 
 var TipWidget,
@@ -82,8 +82,8 @@ TipWidget.prototype = {
     },
     
     close : function () {
-        if (this._initialied) {
-            this.container.remove();
+        if (this._initialized) {
+            this.container.remove().setStyle('width', null);
         }
         return this;
     },

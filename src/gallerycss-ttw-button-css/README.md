@@ -1,2 +1,2 @@
-TipTheWeb Button CSS
-====================
+TipTheWeb Tip Button CSS
+========================

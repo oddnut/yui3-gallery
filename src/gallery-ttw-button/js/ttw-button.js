@@ -6,7 +6,7 @@ work by tipping it.
 
 @url http://tiptheweb.org/
 @see http://tiptheweb.org/docs/integration/buttons/
-@module gallery-tiptheweb-button
+@module gallery-ttw-button
 **/
 
 var TipWidget,

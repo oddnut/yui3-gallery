@@ -1,2 +1,2 @@
-TipTheWeb Tip Buttons
-=====================
+TipTheWeb Tip Button
+====================

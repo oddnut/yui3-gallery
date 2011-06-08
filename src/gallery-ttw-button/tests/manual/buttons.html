@@ -2,66 +2,7 @@
 
 <html>
 <head>
-
     <title>TipTheWeb Tip Button Tests</title>
-    
-    <style>
-        /* TTW.Widget CSS */
-        
-        .ttw-widget-overlay,
-        .ttw-widget-overlay iframe {
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-        }
-        .ttw-widget-overlay {
-            display: block;
-            position: fixed;
-            z-index: 2147483647;
-            width: 320px;
-            height: 266px;
-            top: 20px;
-            left: 50%;
-            margin: 0 0 0 -170px;
-            padding: 10px;
-            -webkit-box-shadow: 0 10px 40px -5px rgba(0,0,0, 0.65);
-            -moz-box-shadow: 0 10px 40px -5px rgba(0,0,0, 0.65);
-            box-shadow: 0 10px 40px -5px rgba(0,0,0, 0.65);
-            background: url(../img/overlay_bg.png);
-        }
-        .ttw-widget-overlay iframe {
-            position: relative;
-            z-index: 2;
-            display: block;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: transparent;
-            border: none;
-        }
-        .ttw-widget-overlay-loading {
-            position: absolute;
-            z-index: 1;
-            display: block;
-            width: 32px;
-            height: 32px;
-            left: 50%;
-            top: 50%;
-            margin: -16px 0 0 -16px;
-            background: url(../img/loading.gif) no-repeat;
-        }
-        .ttw-widget-overlay-close {
-            position: absolute;
-            z-index: 3;
-            display: block;
-            width: 24px;
-            height: 24px;
-            top: 10px;
-            left: 10px;
-            cursor: pointer;
-            background: url(../img/close.png) no-repeat;
-        }
-    </style>
 </head>
 
 <body>
@@ -69,9 +10,9 @@
     <h1>TipTheWeb Tip Button Tests</h1>
     
     <ul>
-        <li><a class="ttw-button" href="http://tiptheweb.org/tip/">Tip This</a></li>
-        <li><a class="ttw-button" href="http://tiptheweb.org/tip/?link=http://yuilibrary.com/">Tip YUI</a></li>
-        <li><a class="ttw-button" href="http://tiptheweb.org/tip/?link=http://github.com/yui/&title=YAY">Tip YUI on GitHub</a></li>
+        <li><a class="ttw-button ttw-button-small" href="http://tiptheweb.org/tip/">Tip</a></li>
+        <li><a class="ttw-button ttw-button-large" href="http://tiptheweb.org/tip/?link=http://yuilibrary.com/">Tip YUI</a></li>
+        <li><a class="ttw-button ttw-button-large" href="http://tiptheweb.org/tip/?link=http://github.com/yui/&title=YAY">Tip YUI on GitHub</a></li>
     </ul>
     
     <script src="http://yui.yahooapis.com/3.4.0pr1/build/yui/yui-min.js"></script>
@@ -81,15 +22,18 @@
             combine : false,
             filter  : 'RAW',
             modules : {
-                'gallery-tiptheweb-button' : {
+                'gallerycss-ttw-button-css' : {
+                    type    : 'css',
+                    fullpath: '../../../../build/gallerycss-ttw-button-css/gallerycss-ttw-button-css-min.css'
+                },
+                'gallery-ttw-button' : {
                     type        : 'js',
-                    fullpath    : '../../../../build/gallery-tiptheweb-button/gallery-tiptheweb-button.js',
-                    supersedes  : ['gallerycss-tiptheweb-button'],
-                    requires    : ['node-base', 'node-event-delegate', 'align-plugin', 'querystring-parse-simple', 'querystring-stringify-simple']
+                    fullpath    : '../../../../build/gallery-ttw-button/gallery-ttw-button.js',
+                    requires    : ['gallerycss-ttw-button-css', 'node-base', 'node-event-delegate', 'align-plugin', 'querystring-parse-simple', 'querystring-stringify-simple']
                 }
             }
         
-        }).use('gallery-tiptheweb-button', function(Y){
+        }).use('gallery-ttw-button', function(Y){
             
         });
     </script>
